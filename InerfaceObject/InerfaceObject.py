@@ -10,7 +10,7 @@ import MySQLdb
 
 class InerfaceObject:
     """
-
+    接口测试封装Request和加密
     """
 
     def __init__(self):
@@ -100,6 +100,5 @@ class InerfaceObject:
 
 if __name__ == '__main__':
     l=InerfaceObject ()
-
     a=l.generate_sign ({'a': '1', 'c': '3', 'b': '2'})
     print a
