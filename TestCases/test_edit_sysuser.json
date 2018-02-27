@@ -1,0 +1,45 @@
+{
+  "test_add_sysuser_OK": {
+    "setup":{
+
+    },
+    "input":{
+      "loginNa":"qxd",
+      "password":"111111",
+      "name":"qxd"
+    },
+    "out":{
+      "exception":"1000"
+    },
+    "teardown":{
+
+    }
+  },
+  "test_add_empty_loginName": {"input":{
+      "loginNa":"",
+      "password":"111111",
+      "name":"qxd"
+    },
+    "out":{
+      "exception":"1000"
+    }
+  },
+  "test_add_empty_password": {"input":{
+      "loginNa":"qxd",
+      "password":"",
+      "name":"qxd"
+    },
+    "out":{
+      "exception":"1000"
+    }
+  },
+  "test_add_empty_name": {"input":{
+      "loginNa":"qxd",
+      "password":"111111",
+      "name":""
+    },
+    "out":{
+      "exception":"1000"
+    }
+  }
+}
