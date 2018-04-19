@@ -1,9 +1,8 @@
 # coding=utf-8
 from Main import MainTest
-from ddt import ddt,file_data
-from InerfaceObject.InerfaceConfig import *
+from ddt import ddt
 from InerfaceObject.InerfaceObject import InerfaceObject
-from TestCases.LoginTest.LoginInerfaceTest import LoginInerTest
+from TestSuites.LoginTest import LoginInerTest
 
 @ddt
 class GroupInerfaceTest(MainTest):

@@ -87,18 +87,25 @@ class InerfaceObject:
             key=self.generate_login_key (j.values ())
             return self.base_url + key
 
-    def join_url(self, args):
+    def join_url(self,args):
         """
         生成sign，拼接请求的包含sign参数字典
         :param args:
         :return:
         """
+        urls=[]
         sign=self.generate_sign (args)
         args.update({'sign':sign})
-        return args
+        items=arg.items()
+        for i in items:
+            (key,value)=i
+            temp_str=key+'='+value
+            urls.append(temp_str)
+        return '&'.join(urls)
 
 
 if __name__ == '__main__':
     l=InerfaceObject ()
-    a=l.generate_sign ({'a': '1', 'c': '3', 'b': '2'})
+    arg={'LoginName': 'qxd', 'password': '123'}
+    a=l.join_url(arg)
     print a

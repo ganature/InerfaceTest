@@ -3,6 +3,7 @@
 from InerfaceObject.InerfaceObject import InerfaceObject
 from InerfaceObject.InerfaceConfig import *
 from LoginTest.LoginInerfaceTest import LoginInerTest
+from TestCases.SysuserInerface import SysuserInerface
 from Main import MainTest
 import ddt
 import json
@@ -15,45 +16,30 @@ class SysuserInerTest (MainTest):
 
     @property
     def request(self):
-        request=InerfaceObject ()
+        request=SysuserInerface ()
         return request
 
     @property
     def login(self):
-        login=LoginInerTest ()
+        login=SysuserInerface ()
         return login
 
     @ddt.file_data ('test_add_sysuser.json')
     def test_add_sysuser(self, setup,input,out,teardown):
         """
         测试新增三级管理员接口
-        :param loginName: 新增三级管理员账号
-        :param password: 新增三级管理员密码
-        :param exception: 期望返回状态码
-        :param name: 新增三级管理员名字
+        :param setup: 初始化参数 登录二级管理员
+        :param input: 测试输入参数
+        :param out: 测试期望输出
+        :param teardown: 还原测试环境
         :return:
         """
-        # 登录二级管理员，获取token
-        token=self.login.normal_login (LOGIN_SYSUSER_PARM.values ())
-        # 生成请求参数字典
-        input.updata ({'token': token})
-        # 生成sign，参数字典加sign值
-        args=self.request.join_url (input)
-        # 拼接url
-        url=SYSUSER_CREAT_INERFACE % dict (
-            token=args['token'],
-            sign=args['sign'],
-            loginName=args['loginName'],
-            password=args['password'],
-            name=args['name']
-        )
-        result=self.request.I_get_request (url)
-        r=json.loads (result.content)
+        result=self.request.add_sysuser(setup,input)
         exception=out['exception']
-        self.assertEqual (int (r['status']), int (exception))
+        self.assertEqual (int (result), int (exception))
 
     @ddt.file_data('test_error_add_parm.json')
-    def test_error_add_parm(self,input,out):
+    def test_error_add_parm(self,setup,input,out,teardown):
         """
         新增三级管理员参数错误测试用例
             1、参数拼写错误
@@ -61,11 +47,14 @@ class SysuserInerTest (MainTest):
             3、多余参数错误
         :return:
         """
-        print input,out
-        pass
+        result=self.request.add_sysuser (setup, input)
+        exception=out['exception']
+        self.assertEqual (int (result), int (exception))
+
+
 
     @ddt.file_data('test_edit_sysuser.json')
-    def test_edit_sysuser(self,loginName, password, exception, name):
+    def test_edit_sysuser(self,setup,input,out,teardown):
         # 登录二级管理员，获取token
         token=self.login.normal_login (LOGIN_SYSUSER_PARM.values ())
         # 生成请求参数字典

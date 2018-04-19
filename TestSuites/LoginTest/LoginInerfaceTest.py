@@ -1,9 +1,9 @@
 #coding=utf-8
 
-from TestCases.Main import MainTest
+from TestSuites.Main import MainTest
 from InerfaceObject.InerfaceObject import InerfaceObject
-from ddt import ddt,data,file_data,unpack
-import json,unittest
+from ddt import ddt, file_data
+import json
 from TestData.DataConfig import DataConfig
 
 
