@@ -2,17 +2,17 @@
 
 from InerfaceObject.InerfaceObject import InerfaceObject
 from InerfaceObject.InerfaceConfig import *
-from LoginTest.LoginInerfaceTest import LoginInerTest
+from .LoginTest.LoginInerfaceTest import LoginInerTest
 from TestCases.SysuserInerface import SysuserInerface
-from Main import MainTest
+from .Main import MainTest
 import ddt
 import json
 import unittest
 import HTMLTestRunner
 
 
-@ddt.ddt
-class SysuserInerTest (MainTest):
+
+class SysuserInerTest (unittest.TestCase):
 
     @property
     def request(self):
@@ -21,8 +21,13 @@ class SysuserInerTest (MainTest):
 
     @property
     def login(self):
-        login=SysuserInerface ()
+        login=LoginInerTest ()
         return login
+
+    @ddt.data([3, 2], [4, 3], [5, 3])
+    @ddt.unpack
+    def test_list_extracted_into_arguments(self, first_value, second_value):
+        self.assertTrue(first_value > second_value)
 
     @ddt.file_data ('test_add_sysuser.json')
     def test_add_sysuser(self, setup,input,out,teardown):
@@ -69,7 +74,6 @@ class SysuserInerTest (MainTest):
             password=args['password'],
             name=args['name']
         )
-        print url
         result=self.request.I_get_request (url)
         r=json.loads (result.content)
         self.assertEqual (int (r['status']), int (exception))

@@ -57,5 +57,5 @@ class DataConfig:
 if __name__=='__main__':
     d=DataConfig(filename='DataSource.xlsx')
     for i  in d.get_TestCase_Parmerner(sheet_name='LoginInerTest'):
-        print str(i)
+        print (str(i))
 

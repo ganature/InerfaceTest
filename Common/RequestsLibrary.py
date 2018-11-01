@@ -2,6 +2,7 @@
 import requests
 import json
 
+r=requests.session()
 
 class RequestsLibrary (object):
     """

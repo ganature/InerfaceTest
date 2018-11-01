@@ -1,8 +1,8 @@
 # coding=utf-8
-from Main import MainTest
+from .Main import MainTest
 from ddt import ddt
 from InerfaceObject.InerfaceObject import InerfaceObject
-from TestSuites.LoginTest import LoginInerTest
+from TestSuites.LoginTest import LoginInerfaceTest
 
 @ddt
 class GroupInerfaceTest(MainTest):
@@ -14,7 +14,7 @@ class GroupInerfaceTest(MainTest):
 
     @property
     def login(self):
-        login=LoginInerTest ()
+        login=LoginInerfaceTest ()
         return login
 
     def test_add_group(self,input,out):

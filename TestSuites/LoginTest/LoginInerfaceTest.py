@@ -19,6 +19,9 @@ class LoginInerTest (MainTest):
     登录接口测试类
     '''
 
+    def __init__(self):
+        super(LoginInerTest,self).__init__()
+
     @property
     def request(self):
         request = InerfaceObject ()

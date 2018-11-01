@@ -1,8 +1,8 @@
 # coding=utf-8
-from Main import MainTest
+from .Main import MainTest
 from InerfaceObject.InerfaceConfig import *
 from InerfaceObject.InerfaceObject import InerfaceObject
-from LoginTest.LoginInerfaceTest import LoginInerTest
+from .LoginTest import LoginInerTest
 from ddt import ddt,file_data,data
 
 @ddt
