@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>HTPP Inerface Test</h1>
-<p class='attribute'><strong>Start Time:</strong> 2018-02-02 11:57:05</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:01.525000</p>
-<p class='attribute'><strong>Status:</strong> Pass 16 Failure 2 Error 9</p>
+<p class='attribute'><strong>Start Time:</strong> 2018-11-01 17:50:50</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:00.001035</p>
+<p class='attribute'><strong>Status:</strong> Error 4</p>
 
 <p class='description'>This is report outout</p>
 </div>
@@ -221,160 +221,31 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='failClass'>
-    <td>TestCases.LoginTest.LoginInerfaceTest.LoginInerTest</td>
-    <td>12</td>
-    <td>10</td>
-    <td>2</td>
-    <td>0</td>
-    <td><a href="javascript:showClassDetail('c1',12)">Detail</a></td>
-</tr>
-
-<tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_normal_login_1_test_empty_password</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='pt1.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_normal_login_2_test_err_userName</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='pt1.3' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_normal_login_3_test_empty_password_userName</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='pt1.4' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_normal_login_4_test_err_password</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='ft1.5' class='none'>
-    <td class='failCase'><div class='testcase'>test_normal_login_5_test_login_OK</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.5')" >
-        fail</a>
-
-    <div id='div_ft1.5' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.5').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft1.5: Traceback (most recent call last):
-  File "C:\Python27\lib\site-packages\ddt.py", line 139, in wrapper
-    return func(self, *args, **kwargs)
-  File "E:\Project\InerfaceTest\TestCases\LoginTest\LoginInerfaceTest.py", line 40, in test_normal_login
-    self.assertEqual(r['status'],int(exception))
-AssertionError: -1002 != 1000
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr id='pt1.6' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_normal_login_6_test_empty_userName</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='pt1.7' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_normal_login_1_test_empty_password</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='pt1.8' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_normal_login_2_test_err_userName</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='pt1.9' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_normal_login_3_test_empty_password_userName</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='pt1.10' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_normal_login_4_test_err_password</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='ft1.11' class='none'>
-    <td class='failCase'><div class='testcase'>test_normal_login_5_test_login_OK</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.11')" >
-        fail</a>
-
-    <div id='div_ft1.11' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.11').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft1.11: Traceback (most recent call last):
-  File "C:\Python27\lib\site-packages\ddt.py", line 139, in wrapper
-    return func(self, *args, **kwargs)
-  File "E:\Project\InerfaceTest\TestCases\LoginTest\LoginInerfaceTest.py", line 40, in test_normal_login
-    self.assertEqual(r['status'],int(exception))
-AssertionError: -1002 != 1000
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr id='pt1.12' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_normal_login_6_test_empty_userName</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
 <tr class='errorClass'>
-    <td>TestCases.SysuserInerfaceTest.SysuserInerTest</td>
-    <td>15</td>
-    <td>6</td>
+    <td>unittest.loader._FailedTest</td>
+    <td>4</td>
     <td>0</td>
-    <td>9</td>
-    <td><a href="javascript:showClassDetail('c2',15)">Detail</a></td>
+    <td>0</td>
+    <td>4</td>
+    <td><a href="javascript:showClassDetail('c1',4)">Detail</a></td>
 </tr>
 
-<tr id='ft2.1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_add_sysuser_1_test_add_empty_loginName</div></td>
+<tr id='ft1.1' class='none'>
+    <td class='errorCase'><div class='testcase'>GroupInerfaceTest</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.1')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
         error</a>
 
-    <div id='div_ft2.1' class="popup_window">
+    <div id='div_ft1.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft2.1: Traceback (most recent call last):
-  File "C:\Python27\lib\site-packages\ddt.py", line 139, in wrapper
-    return func(self, *args, **kwargs)
-  File "E:\Project\InerfaceTest\TestCases\SysuserInerfaceTest.py", line 37, in test_add_sysuser
-    token=self.login.normal_login (LOGIN_SYSUSER_PARM.values ())
-  File "E:\Project\InerfaceTest\TestCases\SysuserInerfaceTest.py", line 23, in login
-    login=LoginInerTest ()
-  File "C:\Python27\lib\unittest\case.py", line 189, in __init__
-    (self.__class__, methodName))
-ValueError: no such test method in &lt;class 'TestCases.LoginTest.LoginInerfaceTest.LoginInerTest'&gt;: runTest
-
+ft1.1: b'ImportError: Failed to import test module: TestSuites.GroupInerfaceTest\nTraceback (most recent call last):\n  File "C:\\Python37\\lib\\unittest\\loader.py", line 434, in _find_test_path\n    module = self._get_module_from_name(name)\n  File "C:\\Python37\\lib\\unittest\\loader.py", line 375, in _get_module_from_name\n    __import__(name)\n  File "D:\\PycharmProjects\\InerfaceTest\\TestSuites\\GroupInerfaceTest.py", line 2, in &lt;module&gt;\n    from Main import MainTest\nModuleNotFoundError: No module named \'Main\'\n\n'
 
         </pre>
     </div>
@@ -383,32 +254,22 @@ ValueError: no such test method in &lt;class 'TestCases.LoginTest.LoginInerfaceT
     </td>
 </tr>
 
-<tr id='ft2.2' class='none'>
-    <td class='errorCase'><div class='testcase'>test_add_sysuser_2_test_add_empty_name</div></td>
+<tr id='ft1.2' class='none'>
+    <td class='errorCase'><div class='testcase'>LoginInerfaceTest</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.2')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
         error</a>
 
-    <div id='div_ft2.2' class="popup_window">
+    <div id='div_ft1.2' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.2').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.2').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft2.2: Traceback (most recent call last):
-  File "C:\Python27\lib\site-packages\ddt.py", line 139, in wrapper
-    return func(self, *args, **kwargs)
-  File "E:\Project\InerfaceTest\TestCases\SysuserInerfaceTest.py", line 37, in test_add_sysuser
-    token=self.login.normal_login (LOGIN_SYSUSER_PARM.values ())
-  File "E:\Project\InerfaceTest\TestCases\SysuserInerfaceTest.py", line 23, in login
-    login=LoginInerTest ()
-  File "C:\Python27\lib\unittest\case.py", line 189, in __init__
-    (self.__class__, methodName))
-ValueError: no such test method in &lt;class 'TestCases.LoginTest.LoginInerfaceTest.LoginInerTest'&gt;: runTest
-
+ft1.2: b'ImportError: Failed to import test module: TestSuites.LoginTest.LoginInerfaceTest\nTraceback (most recent call last):\n  File "C:\\Python37\\lib\\unittest\\loader.py", line 434, in _find_test_path\n    module = self._get_module_from_name(name)\n  File "C:\\Python37\\lib\\unittest\\loader.py", line 375, in _get_module_from_name\n    __import__(name)\n  File "D:\\PycharmProjects\\InerfaceTest\\TestSuites\\LoginTest\\LoginInerfaceTest.py", line 7, in &lt;module&gt;\n    from TestData.DataConfig import DataConfig\n  File "D:\\PycharmProjects\\InerfaceTest\\TestData\\DataConfig.py", line 60\n    print str(i)\n            ^\nSyntaxError: invalid syntax\n\n'
 
         </pre>
     </div>
@@ -417,32 +278,22 @@ ValueError: no such test method in &lt;class 'TestCases.LoginTest.LoginInerfaceT
     </td>
 </tr>
 
-<tr id='ft2.3' class='none'>
-    <td class='errorCase'><div class='testcase'>test_add_sysuser_3_test_add_empty_password</div></td>
+<tr id='ft1.3' class='none'>
+    <td class='errorCase'><div class='testcase'>SysuserInerfaceTest</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.3')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.3')" >
         error</a>
 
-    <div id='div_ft2.3' class="popup_window">
+    <div id='div_ft1.3' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.3').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.3').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft2.3: Traceback (most recent call last):
-  File "C:\Python27\lib\site-packages\ddt.py", line 139, in wrapper
-    return func(self, *args, **kwargs)
-  File "E:\Project\InerfaceTest\TestCases\SysuserInerfaceTest.py", line 37, in test_add_sysuser
-    token=self.login.normal_login (LOGIN_SYSUSER_PARM.values ())
-  File "E:\Project\InerfaceTest\TestCases\SysuserInerfaceTest.py", line 23, in login
-    login=LoginInerTest ()
-  File "C:\Python27\lib\unittest\case.py", line 189, in __init__
-    (self.__class__, methodName))
-ValueError: no such test method in &lt;class 'TestCases.LoginTest.LoginInerfaceTest.LoginInerTest'&gt;: runTest
-
+ft1.3: b'ImportError: Failed to import test module: TestSuites.SysuserInerfaceTest\nTraceback (most recent call last):\n  File "C:\\Python37\\lib\\unittest\\loader.py", line 434, in _find_test_path\n    module = self._get_module_from_name(name)\n  File "C:\\Python37\\lib\\unittest\\loader.py", line 375, in _get_module_from_name\n    __import__(name)\n  File "D:\\PycharmProjects\\InerfaceTest\\TestSuites\\SysuserInerfaceTest.py", line 72\n    print url\n            ^\nSyntaxError: Missing parentheses in call to \'print\'. Did you mean print(url)?\n\n'
 
         </pre>
     </div>
@@ -451,322 +302,36 @@ ValueError: no such test method in &lt;class 'TestCases.LoginTest.LoginInerfaceT
     </td>
 </tr>
 
-<tr id='ft2.4' class='none'>
-    <td class='errorCase'><div class='testcase'>test_add_sysuser_4_test_add_empty_loginName_password</div></td>
+<tr id='ft1.4' class='none'>
+    <td class='errorCase'><div class='testcase'>UserInerfaceTest</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.4')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.4')" >
         error</a>
 
-    <div id='div_ft2.4' class="popup_window">
+    <div id='div_ft1.4' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.4').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.4').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft2.4: Traceback (most recent call last):
-  File "C:\Python27\lib\site-packages\ddt.py", line 139, in wrapper
-    return func(self, *args, **kwargs)
-  File "E:\Project\InerfaceTest\TestCases\SysuserInerfaceTest.py", line 37, in test_add_sysuser
-    token=self.login.normal_login (LOGIN_SYSUSER_PARM.values ())
-  File "E:\Project\InerfaceTest\TestCases\SysuserInerfaceTest.py", line 23, in login
-    login=LoginInerTest ()
-  File "C:\Python27\lib\unittest\case.py", line 189, in __init__
-    (self.__class__, methodName))
-ValueError: no such test method in &lt;class 'TestCases.LoginTest.LoginInerfaceTest.LoginInerTest'&gt;: runTest
-
+ft1.4: b'ImportError: Failed to import test module: TestSuites.UserInerfaceTest\nTraceback (most recent call last):\n  File "C:\\Python37\\lib\\unittest\\loader.py", line 434, in _find_test_path\n    module = self._get_module_from_name(name)\n  File "C:\\Python37\\lib\\unittest\\loader.py", line 375, in _get_module_from_name\n    __import__(name)\n  File "D:\\PycharmProjects\\InerfaceTest\\TestSuites\\UserInerfaceTest.py", line 2, in &lt;module&gt;\n    from Main import MainTest\nModuleNotFoundError: No module named \'Main\'\n\n'
 
         </pre>
     </div>
     <!--css div popup end-->
 
     </td>
-</tr>
-
-<tr id='ft2.5' class='none'>
-    <td class='errorCase'><div class='testcase'>test_add_sysuser_5_test_add_sysuser_OK</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.5')" >
-        error</a>
-
-    <div id='div_ft2.5' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.5').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft2.5: Traceback (most recent call last):
-  File "C:\Python27\lib\site-packages\ddt.py", line 139, in wrapper
-    return func(self, *args, **kwargs)
-  File "E:\Project\InerfaceTest\TestCases\SysuserInerfaceTest.py", line 37, in test_add_sysuser
-    token=self.login.normal_login (LOGIN_SYSUSER_PARM.values ())
-  File "E:\Project\InerfaceTest\TestCases\SysuserInerfaceTest.py", line 23, in login
-    login=LoginInerTest ()
-  File "C:\Python27\lib\unittest\case.py", line 189, in __init__
-    (self.__class__, methodName))
-ValueError: no such test method in &lt;class 'TestCases.LoginTest.LoginInerfaceTest.LoginInerTest'&gt;: runTest
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr id='ft2.6' class='none'>
-    <td class='errorCase'><div class='testcase'>test_edit_sysuser_1_test_add_empty_loginName</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.6')" >
-        error</a>
-
-    <div id='div_ft2.6' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.6').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft2.6: Traceback (most recent call last):
-  File "C:\Python27\lib\site-packages\ddt.py", line 139, in wrapper
-    return func(self, *args, **kwargs)
-TypeError: test_edit_sysuser() got an unexpected keyword argument 'input'
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr id='ft2.7' class='none'>
-    <td class='errorCase'><div class='testcase'>test_edit_sysuser_2_test_add_empty_name</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.7')" >
-        error</a>
-
-    <div id='div_ft2.7' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.7').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft2.7: Traceback (most recent call last):
-  File "C:\Python27\lib\site-packages\ddt.py", line 139, in wrapper
-    return func(self, *args, **kwargs)
-TypeError: test_edit_sysuser() got an unexpected keyword argument 'input'
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr id='ft2.8' class='none'>
-    <td class='errorCase'><div class='testcase'>test_edit_sysuser_3_test_add_empty_password</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.8')" >
-        error</a>
-
-    <div id='div_ft2.8' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.8').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft2.8: Traceback (most recent call last):
-  File "C:\Python27\lib\site-packages\ddt.py", line 139, in wrapper
-    return func(self, *args, **kwargs)
-TypeError: test_edit_sysuser() got an unexpected keyword argument 'input'
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr id='ft2.9' class='none'>
-    <td class='errorCase'><div class='testcase'>test_edit_sysuser_4_test_add_sysuser_OK</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.9')" >
-        error</a>
-
-    <div id='div_ft2.9' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.9').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft2.9: Traceback (most recent call last):
-  File "C:\Python27\lib\site-packages\ddt.py", line 139, in wrapper
-    return func(self, *args, **kwargs)
-TypeError: test_edit_sysuser() got an unexpected keyword argument 'input'
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr id='pt2.10' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_error_add_parm_1_test_add_error_name</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.10')" >
-        pass</a>
-
-    <div id='div_pt2.10' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.10').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt2.10: {u'passw': u'111111', u'loginName': u'qxd', u'namenn': u'qxd'} {u'exception': u'1000'}
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr id='pt2.11' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_error_add_parm_2_test_add_lack_loginName</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.11')" >
-        pass</a>
-
-    <div id='div_pt2.11' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.11').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt2.11: {u'password': u'111111', u'name': u'qxd'} {u'exception': u'1000'}
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr id='pt2.12' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_error_add_parm_3_test_add_error_password</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.12')" >
-        pass</a>
-
-    <div id='div_pt2.12' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.12').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt2.12: {u'passw': u'111111', u'loginName': u'qxd', u'name': u'qxd'} {u'exception': u'1000'}
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr id='pt2.13' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_error_add_parm_4_test_add_error_loginName</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.13')" >
-        pass</a>
-
-    <div id='div_pt2.13' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.13').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt2.13: {u'password': u'111111', u'name': u'qxd', u'loginNa': u'qxd'} {u'exception': u'1000'}
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr id='pt2.14' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_error_add_parm_5_test_add_lack_password</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.14')" >
-        pass</a>
-
-    <div id='div_pt2.14' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.14').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt2.14: {u'loginName': u'qxd', u'name': u'qxd'} {u'exception': u'1000'}
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr id='pt2.15' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_error_edit_parm</div></td>
-    <td colspan='5' align='center'>pass</td>
 </tr>
 
 <tr id='total_row'>
     <td>Total</td>
-    <td>27</td>
-    <td>16</td>
-    <td>2</td>
-    <td>9</td>
+    <td>4</td>
+    <td>0</td>
+    <td>0</td>
+    <td>4</td>
     <td>&nbsp;</td>
 </tr>
 </table>

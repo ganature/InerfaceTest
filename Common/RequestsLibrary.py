@@ -2,17 +2,20 @@
 import requests
 import json
 
-class RequestsLibrary(object):
+
+class RequestsLibrary (object):
     """
     封装Requests库
     """
+
     def __init__(self):
-        self.session=requests.session()
+        pass
+
     @property
     def get_session(self):
         return requests.session ()
 
-    def get_request(self, url,parm):
+    def get_request(self, url, parm=None):
         return self.get_session.get (url)
 
     def post_request(self, url):
@@ -25,12 +28,10 @@ class RequestsLibrary(object):
         return self.get_session.delete (url)
 
 
-
-if __name__=='__main__':
-    r=requests.session()
-    result=r.get('http://www.tietonggroup.com/ttsd/publicNumber/login?key=dGlhbmhjLDExMTExMQ==')
-    print type(json.loads(result.content))
-    content=json.loads(result.content)
-    token=content['data']['token']
-    r=RequestsLibrary()
-    r.get_name()
+if __name__ == '__main__':
+    r = requests.session ()
+    result = r.get ('http://www.tietonggroup.com/ttsd/publicNumber/login?key=dGlhbmhjLDExMTExMQ==')
+    print (type (json.loads (result.content)))
+    content = json.loads (result.content)
+    token = content['data']['token']
+    r = RequestsLibrary ()

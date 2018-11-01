@@ -89,12 +89,3 @@ class SysuserInerface:
         查询群组
         :return:
         """
-
-a=[1,2,5,1,1,3,2,4,3]
-
-a.sort(reverse=True)
-print a
-
-b=lambda x,y:x+y
-x=1;y=1
-print b(1,2)

@@ -1,11 +1,10 @@
 # coding=utf-8
 
 from Common.RequestsLibrary import RequestsLibrary
-from InerfaceConfig import *
+from InerfaceObject.InerfaceConfig import *
 import base64
 import hashlib
 import json
-import MySQLdb
 
 
 class InerfaceObject:
@@ -14,22 +13,13 @@ class InerfaceObject:
     """
 
     def __init__(self):
-        self.base_url=LOGIN_INERFACE_BASEURL
-        # self.con=MySQLdb.connect(
-        #     host=MySQL_HOST,
-        #     user=MySQL_USER,
-        #     passwd=MySQL_PASSWORD,
-        #     db=MySQL_DB
-        # )
-        # self.cur=self.con.cursor(cursorclass=MySQLdb.cursors.DictCursor)
+        self.base_url = LOGIN_INERFACE_BASEURL
 
     @property
     def request(self):
-        request=RequestsLibrary ()
+        request = RequestsLibrary ()
         return request
 
-    def mysql(self):
-        pass
     def generate_login_key(self, *args):
         # type: (object) -> object
         '''
@@ -48,26 +38,26 @@ class InerfaceObject:
         example：
         :return:
         '''
-        signset=[]
-        sign=args.keys ()
+        signset = []
+        sign = args.keys ()
         sign.sort ()
         for si in sign:
             signset.append (si + args[si])
-        s=''.join (signset)
-        m=hashlib.md5 ()
+        s = ''.join (signset)
+        m = hashlib.md5 ()
         m.update (s)
         return m.hexdigest ().upper ()
 
-    def I_get_request(self, url,  cookies=None):
-        result=self.request.get_request (url,cookies)
+    def get_request(self, url, cookies=None):
+        result = self.request.get_request (url, cookies)
         return result
 
     def I_put_request(self, url, parm=None):
-        result=self.request.put_request (url)
+        result = self.request.put_request (url)
         return result
 
     def I_post_request(self, url, parm=None):
-        result=self.request.post_request (url)
+        result = self.request.post_request (url)
         return result
 
     def join_login_url(self, *args):
@@ -77,35 +67,34 @@ class InerfaceObject:
         :return:
         """
         if isinstance (args, tuple):
-            key=self.generate_login_key (*args)
+            key = self.generate_login_key (*args)
             return self.base_url + key
         elif isinstance (args, dict):
-            key=self.generate_login_key (args.values ())
+            key = self.generate_login_key (args.values ())
             return self.base_url + key
         elif isinstance (args, str):
-            j=json.loads (args)
-            key=self.generate_login_key (j.values ())
+            j = json.loads (args)
+            key = self.generate_login_key (j.values ())
             return self.base_url + key
 
-    def join_url(self,args):
+    def join_url(self, args):
         """
         生成sign，拼接请求的包含sign参数字典
         :param args:
         :return:
         """
-        urls=[]
-        sign=self.generate_sign (args)
-        args.update({'sign':sign})
-        items=arg.items()
+        urls = []
+        sign = self.generate_sign (args)
+        args.update ({'sign': sign})
+        items = arg.items ()
         for i in items:
-            (key,value)=i
-            temp_str=key+'='+value
-            urls.append(temp_str)
-        return '&'.join(urls)
+            (key, value) = i
+            temp_str = key + '=' + value
+            urls.append (temp_str)
+        return '&'.join (urls)
 
 
 if __name__ == '__main__':
-    l=InerfaceObject ()
-    arg={'LoginName': 'qxd', 'password': '123'}
-    a=l.join_url(arg)
-    print a
+    l = InerfaceObject ()
+    arg = {'LoginName': 'qxd', 'password': '123'}
+    a = l.join_url (arg)
