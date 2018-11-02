@@ -2,7 +2,7 @@
 import requests
 import json
 
-r=requests.session()
+
 
 class RequestsLibrary (object):
     """
@@ -10,23 +10,34 @@ class RequestsLibrary (object):
     """
 
     def __init__(self):
-        pass
+        self.session=requests.Session()
 
-    @property
-    def get_session(self):
-        return requests.session ()
 
-    def get_request(self, url, parm=None):
-        return self.get_session.get (url)
+    def _create_session(self,headers,
+            cookies,
+            auth,
+            timeout,
+            max_retries,
+            backoff_factor,
+            proxies,
+            verify,
+            debug,
+            disable_warnings):
+        """
+        创建session
+        :param headers:
+        :param cookies:
+        :param auth:
+        :param timeout:
+        :param max_retries:
+        :param backoff_factor:
+        :param proxies:
+        :param verify:
+        :param debug:
+        :param disable_warnings:
+        :return:
+        """
 
-    def post_request(self, url):
-        return self.get_session.post (url)
-
-    def put_request(self, url):
-        return self.get_session.put (url)
-
-    def delete_request(self, url):
-        return self.get_session.delete (url)
 
 
 if __name__ == '__main__':
