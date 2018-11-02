@@ -73,7 +73,7 @@
                 <stringProp name="Header.value">bearer 9b3a4fd9-0f41-44e7-8b9d-7c1b2171d22f</stringProp>
               </elementProp>
               <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">appName</stringProp>
+                <stringProp name="Header.name">appName1</stringProp>
                 <stringProp name="Header.value">Wechat_E_Commerce_Mini_Program</stringProp>
               </elementProp>
               <elementProp name="" elementType="Header">
