@@ -12,7 +12,7 @@ import HTMLTestRunner
 
 
 
-class SysuserInerTest (unittest.TestCase):
+class SysuserInerTest (MainTest):
 
     @property
     def request(self):
@@ -24,8 +24,7 @@ class SysuserInerTest (unittest.TestCase):
         login=LoginInerTest ()
         return login
 
-    @ddt.data([3, 2], [4, 3], [5, 3])
-    @ddt.unpack
+
     def test_list_extracted_into_arguments(self, first_value, second_value):
         self.assertTrue(first_value > second_value)
 
