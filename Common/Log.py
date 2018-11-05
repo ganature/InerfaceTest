@@ -18,7 +18,7 @@ id_simple_format = '%(levelname)s-%(asctime)s %(message)s'
 
 logfile_dir = os.path.dirname(os.path.abspath(__file__))  # log文件的目录
 
-logfile_name = 'all2.log'  # log文件名
+logfile_name = 'debug.log'  # log文件名
 
 # 如果不存在定义的日志目录就创建一个
 if not os.path.isdir(logfile_dir):
