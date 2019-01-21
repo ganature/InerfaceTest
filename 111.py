@@ -37,7 +37,7 @@ def get_files(filepath):
         dir=os.listdir(filepath)
         for d in dir:
             if os.path.isfile(os.path.join(filepath,d)):
-                print d
+                print (d)
             else:
                 get_files(os.path.join(filepath,d))
 
@@ -45,9 +45,9 @@ def get_files(filepath):
 
 
 if __name__=="__main__":
-    filepath='E:\qxd'
+    filepath='D:\\Software'
     # print(os.listdir(filepath))
-    # get_files(filepath)
+    get_files(filepath)
     # a='aodbsld'
     # for dirpath, dirnames, filenames in os.walk (filepath):
     #     for filename in filenames:
@@ -63,10 +63,4 @@ if __name__=="__main__":
     # A0={'a': 1, 'c': 3, 'b': 2, 'e': 5, 'd': 4}
     # for i in A0:
     #     print i
-    a=[3,2,1,4]
-    for i in range(len(a)+1):
-        if a[i]>a[i+1]:
-            (a[i],a[i+1])=(a[i+1],a[i])
-
-    print a
 

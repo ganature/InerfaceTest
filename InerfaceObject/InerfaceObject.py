@@ -14,7 +14,7 @@ class InerfaceObject:
     """
 
     def __init__(self):
-        self.base_url=LOGIN_INERFACE_BASEURL
+        self.base_url=''
         # self.con=MySQLdb.connect(
         #     host=MySQL_HOST,
         #     user=MySQL_USER,
@@ -108,4 +108,4 @@ if __name__ == '__main__':
     l=InerfaceObject ()
     arg={'LoginName': 'qxd', 'password': '123'}
     a=l.join_url(arg)
-    print a
+
